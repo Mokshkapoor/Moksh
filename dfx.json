@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "Moksh_backend": {
+      "main": "src/Moksh_backend/main.mo",
+      "type": "motoko"
+    },
+    "Moksh_frontend": {
+      "dependencies": [
+        "Moksh_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/Moksh_frontend/src/index.html"
+      },
+      "source": [
+        "src/Moksh_frontend/assets",
+        "dist/Moksh_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
